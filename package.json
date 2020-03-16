@@ -1,0 +1,22 @@
+{
+  "name": "decomoji-colors-getter",
+  "version": "0.1.0",
+  "description": "Get decomoji's index number of DecomojiColors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decomoji/decomoji-colors-getter.git"
+  },
+  "author": "decomoji",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/decomoji/decomoji-colors-getter/issues"
+  },
+  "homepage": "https://github.com/decomoji/decomoji-colors-getter#readme",
+  "dependencies": {
+    "png-js": "^1.0.0"
+  }
+}
