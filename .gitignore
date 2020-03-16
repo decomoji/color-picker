@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+.bundle
+.history
+dist
+node_modules
