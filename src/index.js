@@ -1,15 +1,25 @@
+const path = require('path')
 const fs = require('fs')
+const argv = require('minimist')(process.argv.slice(2))
+const mkdirp = require('mkdirp')
 const PNG = require('png-js')
 
-const files = fs.readdirSync('.')
-const promises = files.filter(file => /\.png$/.test(file)).map(readColor)
+const inputDir = argv['input-dir'] || '.'
+const output = argv.output || './dist/result.tsv'
+
+const files = fs
+  .readdirSync(inputDir)
+  .filter(file => /\.png$/.test(file))
+  .map(file => path.resolve(inputDir, file))
+const promises = files.map(readColor)
 
 Promise.all(promises).then(colors => {
+  mkdirp.sync(path.dirname(output))
   fs.writeFileSync(
-    'result.tsv',
+    output,
     colors
       .map(([file, color]) => {
-        file = file.replace(/\.png$/, '')
+        file = path.basename(file, '.png')
         return `${file}\t${color}`
       })
       .join('\n')
@@ -31,11 +41,11 @@ const DecomojiColors_v5 = [
   'a36969' // 11
 ]
 
-function colorIndex(rgb) {
-  const r = ('0' + rgb.r.toString(16)).slice(-2)
-  const g = ('0' + rgb.g.toString(16)).slice(-2)
-  const b = ('0' + rgb.b.toString(16)).slice(-2)
-  return DecomojiColors_v5.indexOf(`${r}${g}${b}`)
+function colorIndex({ r, g, b }) {
+  const rr = r.toString(16).padStart(2, '0')
+  const gg = g.toString(16).padStart(2, '0')
+  const bb = b.toString(16).padStart(2, '0')
+  return DecomojiColors_v5.indexOf(`${rr}${gg}${bb}`)
 }
 
 function readColor(file) {
