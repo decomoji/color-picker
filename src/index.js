@@ -3,6 +3,7 @@ const fs = require('fs')
 const argv = require('minimist')(process.argv.slice(2))
 const mkdirp = require('mkdirp')
 const PNG = require('png-js')
+const DecomojiColorsHEX = require('@decomoji/decomoji-colors')
 
 const inputDir = argv['input-dir'] || '.'
 const output = argv.output || './dist/result.tsv'
@@ -26,26 +27,11 @@ Promise.all(promises).then(colors => {
   )
 })
 
-const DecomojiColors_v5 = [
-  'dd3b40', // 0
-  'c05b2c', // 1
-  '9f7e00', // 2
-  '688200', // 3
-  '008c22', // 4
-  '008780', // 5
-  '0081b1', // 6
-  '477f9b', // 7
-  '5d79aa', // 8
-  'a156d2', // 9
-  'd43892', // 10
-  'a36969' // 11
-]
-
 function colorIndex({ r, g, b }) {
   const rr = r.toString(16).padStart(2, '0')
   const gg = g.toString(16).padStart(2, '0')
   const bb = b.toString(16).padStart(2, '0')
-  return DecomojiColors_v5.indexOf(`${rr}${gg}${bb}`)
+  return DecomojiColorsHEX.indexOf(`${rr}${gg}${bb}`)
 }
 
 function readColor(file) {
