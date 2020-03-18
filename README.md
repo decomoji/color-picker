@@ -14,6 +14,6 @@ node src/index.js --input-dir example
 default: `.`
 
 ### `--output`
-出力先ディレクトリ。
+出力ファイル。
 
 default: `./dist/result.tsv`
