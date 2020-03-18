@@ -3,7 +3,7 @@ const fs = require('fs')
 const argv = require('minimist')(process.argv.slice(2))
 const mkdirp = require('mkdirp')
 const PNG = require('png-js')
-const DecomojiColorsHEX = require('@decomoji/decomoji-colors')
+const DecomojiColorsHEX = require('@decomoji/decomoji-colors').DecomojiColorsHEX
 
 const inputDir = argv['input-dir'] || '.'
 const output = argv.output || './dist/result.tsv'
