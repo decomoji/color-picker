@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/decomoji/decomoji-colors-getter#readme",
   "dependencies": {
+    "@decomoji/decomoji-colors": "^1.2.0",
     "minimist": "^1.2.5",
     "mkdirp": "^1.0.3",
     "png-js": "^1.0.0"
