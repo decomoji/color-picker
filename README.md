@@ -1,4 +1,6 @@
-# decomoji-colors-getter
+# decomoji-color-picker
+
+デコモジファイルからデコモジカラーを引き当てるスクリプト。
 
 ## Example
 

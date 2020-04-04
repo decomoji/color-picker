@@ -1,5 +1,5 @@
 {
-  "name": "decomoji-colors-getter",
+  "name": "decomoji-color-picker",
   "version": "0.1.0",
   "description": "Get decomoji's index number of DecomojiColors",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/decomoji/decomoji-colors-getter.git"
+    "url": "git+https://github.com/decomoji/decomoji-color-picker.git"
   },
   "author": "decomoji",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/decomoji/decomoji-colors-getter/issues"
+    "url": "https://github.com/decomoji/decomoji-color-picker/issues"
   },
-  "homepage": "https://github.com/decomoji/decomoji-colors-getter#readme",
+  "homepage": "https://github.com/decomoji/decomoji-color-picker#readme",
   "dependencies": {
     "@decomoji/decomoji-colors": "^1.2.0",
     "minimist": "^1.2.5",
