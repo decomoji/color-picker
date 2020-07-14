@@ -1,6 +1,6 @@
 {
   "name": "decomoji-color-picker",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Get decomoji's index number of DecomojiColors",
   "main": "index.js",
   "scripts": {
