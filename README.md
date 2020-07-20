@@ -19,3 +19,7 @@ default: `.`
 出力ファイル。
 
 default: `./dist/result.tsv`
+
+## ライセンス
+
+Copyright (c) oti. Under the [MIT License](LICENSE).
