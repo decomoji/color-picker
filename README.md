@@ -13,12 +13,12 @@ node src/index.js --input-dir example
 ### `--input-dir`
 デコモジ PNG が格納されているディレクトリ。
 
-default: `.`
+default: `./input/`
 
 ### `--output`
 出力ファイル。
 
-default: `./dist/result.tsv`
+default: `./output/result.tsv`
 
 ## ライセンス
 
