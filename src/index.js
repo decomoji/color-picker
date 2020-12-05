@@ -5,8 +5,8 @@ const mkdirp = require('mkdirp')
 const PNG = require('png-js')
 const DecomojiColorsHEX = require('@decomoji/colors').DecomojiColors.map(v => v.hex)
 
-const output = argv.output || './dist/result.tsv'
 const inputDir = argv['input-dir'] || 'input'
+const output = argv.output || 'output/result.tsv'
 
 const files = fs
   .readdirSync(inputDir)
