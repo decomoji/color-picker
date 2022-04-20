@@ -18,7 +18,7 @@
   "homepage": "https://github.com/decomoji/decomoji-color-picker#readme",
   "dependencies": {
     "@decomoji/colors": "^1.2.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "mkdirp": "^1.0.3",
     "png-js": "^1.0.0"
   }
